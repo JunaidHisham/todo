@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "baloopaaji2-regular";
+    src: url("../../assets/fonts/baloopaaji2-regular-webfont.woff2")
+            format("woff2"),
+        url("../../assets/fonts/baloopaaji2-regular-webfont.woff")
+            format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: "baloopaaji2-regular";
+    text-align: center;
+    font-size: 60px;
+    padding: 90px 0 50px;
+}
+div.todos {}
+div.todos div.todo {}
+div.todos div.todo div.left {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+div.todos div.todo div.left input[type=checkbox] {
+    display: none;
+    width: 50px;
+}
+div.todos div.todo div.left p {
+    font-size: 25px;
+    position: relative;
+    left: 40px;
+}
+div.todos div.todo div.left p::before {
+    position: absolute;
+    margin-bottom: 20px;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    left: -40px;
+    top: 0px;
+    border: 2px solid #000;
+}
+div.input {
+    display: flex;
+    position: relative;
+    width: 90%;
+}
+div.input input {
+    font-size: 20px;
+    padding: 15px 5px;
+    flex: 1;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+div.input button {
+    background: #091241;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    padding: 15px 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
