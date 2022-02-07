@@ -4,7 +4,7 @@ import Tick from "../assets/tick-green.svg";
 import Delete from "../assets/delete.svg";
 import Revert from "../assets/revert.svg";
 import Plus from "../assets/plus.svg";
-import Pen from "../assets/pencil.svg"
+import Pen from "../assets/pencil.svg";
 
 function ToDo() {
     const [tasks, setTasks] = useState([]);
@@ -56,13 +56,12 @@ function ToDo() {
     const editTask = (id) => {
         let current_task = tasks.find((task) => task.id == id);
         setNewTask(current_task.title);
-
+    
         let new_list = tasks.filter((task) => task.id !== id);
         setTasks(new_list);
-
+        
         setItemCount((prev) => prev - 1);
-
-    }
+    };
 
     const renderTasks = () => {
         return tasks.map((task) => (
@@ -74,7 +73,7 @@ function ToDo() {
                     </ItemContent>
                 </LeftContainer>
                 <RightContainer>
-                    <ActionButton onClick={()=> editTask(task.id)}>
+                    <ActionButton onClick={() => editTask(task.id)}>
                         <ButtonImage src={Pen} alt="Revert" />
                     </ActionButton>
                     <ActionButton onClick={() => deleteTask(task.id)}>
